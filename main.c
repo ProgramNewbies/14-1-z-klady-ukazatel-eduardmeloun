@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-main () {
+main()
+{
     int a;
     int b;
     int c;
 
-    
-        printf("Zadej tri cisla: \n");
-  
+    printf("Zadej tri cisla:\n");
 
     scanf("%d", &a);
     scanf("%d", &b);
@@ -19,26 +18,28 @@ main () {
 
     int soucet = *p_a + *p_b + *p_c;
 
-    int nejvetsi = *p_a;
-    if (*p_b > nejvetsi)
+    int max = *p_a;
+    if (*p_b > max)
     {
-        nejvetsi = *p_b;
+        max = *p_b;
     }
-    
-    if (*p_c > nejvetsi)
+
+    if (*p_c > max)
     {
-        nejvetsi = *p_c;
+        max = *p_c;
     }
-    
+
     printf("Soucet: %d \n", soucet);
-    printf("Maximum: %d\n", nejvetsi);
+    printf("Maximum: %d\n", max);
 
     if (soucet % 2 == 0)
     {
         printf("Soucet je sudy");
-    }else {
+    }
+    else
+    {
         printf("Soucet je lichy");
     }
-    
+
     return 0;
 }
